@@ -1,0 +1,130 @@
+/* Add your CSS styles here */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.app-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.image-container {
+    max-width: 500px; /* Set maximum width to 90% of the viewport width */
+    overflow: hidden; /* Hide any overflow beyond the container */
+    position: relative; /* Ensure proper positioning of child elements */
+    margin: 0 auto; /* Center the image container horizontally */
+}
+
+.image-wrapper {
+    min-height: 500px !important; /* Set maximum width to 90% of the viewport width */
+    overflow: hidden; /* Hide any overflow beyond the container */
+    position: relative; /* Ensure proper positioning of child elements */
+    margin: 0 auto; /* Center the image container horizontally */
+}
+#uploaded-image {
+    max-width: 100%; /* Set maximum width to 100% of the container width */
+    max-height: 100%; /* Set maximum height to 100% of the container height */
+    width: auto; /* Ensure the image width adjusts based on container width */
+    height: auto; /* Ensure the image height adjusts based on container height */
+}
+
+
+
+#magnifier {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff; /* Adjust the border color and thickness as needed */
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow effect for better visibility */
+    pointer-events: none; /* Ensure the magnifier does not interfere with mouse events on the canvas */
+    z-index: 2; /* Set a higher z-index to ensure it appears above other elements */
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: calc(100% + 20px); /* Shift the popup below the image by 20px */
+    left: 50%; /* Position it horizontally in the center */
+    transform: translateX(-50%); /* Center the popup horizontally */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure the popup appears above the image */
+}
+
+
+#color-box {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+}
+
+#base-color-box {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    border: 2px solid black;/* Additional styling for the base color box */
+}
+#alpha-slider {
+    width: 50%;
+    margin: 10px auto;
+}
+
+#alpha-label {
+    margin-bottom: 5px;
+}
+
+#close-popup {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    .image-container {
+        width: 100%; /* Set the width to 100% for mobile devices */
+    }
+}
+
+
+#colorBox {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 80%;
+    background-color: red;
+    display: none;
+    position: absolute;
+}

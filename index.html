@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to piCol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="video-bg">
+            <source src="land.mp4" type="video/mp4">
+        </video> 
+    </div>
+    <div class="content">
+        <div class="container">
+            <img src="color.png" alt="piCol Logo" class="app-icon">
+            <h1>Welcome to piCol</h1>
+            <h3>A color picker app</h3>
+            <h5>Get your colors :)</h5>
+            <input type="file" id="image-upload" style="display: none;">
+            <button id="enter-button">Upload Image</button>
+            <br>
+            <p></p>
+            <div class="image-container" id="image-container">
+                <h4>Uploaded Image</h4>
+                <div id="image-wrapper">
+                    <img id="uploaded-image" alt="Uploaded Image">
+                    <div id="magnifier"></div> <!-- Magnifier element -->
+                    <canvas id="zoom" width="400" height="200" style="position:absolute; top:0; left:0; display:none"></canvas>
+                </div>
+                <div id="colorBox"></div>
+            </div>
+        </div>
+        <div id="color-popup" class="popup">
+            <div id="color-box"></div>
+            <p id="color-value"></p>
+            <p id="color-rgb"></p>
+            <div id="base-color-box" class="color-box"></div>
+            <p id="base-color-value"></p>
+            <p id="base-color-rgb"></p>
+            <p id="color-composition"></p>
+            <p id="alpha-label">Alpha:</p>
+            <input type="range" id="alpha-slider" min="0" max="1" step="0.01" value="1">
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
